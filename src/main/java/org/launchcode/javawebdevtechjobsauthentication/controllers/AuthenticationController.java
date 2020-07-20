@@ -101,7 +101,7 @@ public class AuthenticationController {
         User theUser = userRepository.findByUsername(loginFormDTO.getUsername());
 
         if (theUser == null) {
-            errors.rejectValue("username", "username.invalid", "You have givin a incorrect username.");
+            errors.rejectValue("username", "username.invalid", "You have given an incorrect username.");
             model.addAttribute("title", "Log In");
             return "login";
         }
